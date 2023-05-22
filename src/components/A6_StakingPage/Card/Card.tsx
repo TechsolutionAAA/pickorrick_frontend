@@ -364,7 +364,7 @@ const Card = (props: any) => {
 
               {stakedFlag ? (
                 <button disabled className={style.btn}>
-                  <p>Staking...</p>
+                  <p>Staked</p>
                 </button>
               ) : approveFlag ? (
                 <button
