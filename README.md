@@ -1,1 +1,1 @@
-# pickorrick_frontend
+# pick-or-rick

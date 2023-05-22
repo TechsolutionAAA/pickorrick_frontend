@@ -1,0 +1,118 @@
+@import "../../assets/scss/app";
+
+.video {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 51px;
+
+  @include desktop {
+    padding-top: 75px;
+  }
+
+  .mobile {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    top: -120px;
+    left: 50%;
+    width: 320px;
+    transform: translateX(-50%);
+  }
+
+  .desktop {
+    @include onlyDesktop();
+    position: absolute;
+    z-index: 1;
+    top: 222px;
+    left: 50%;
+    width: 1825px;
+    transform: translateX(-50%);
+  }
+
+  .videoWrapper {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 300px;
+    height: 160.98px;
+    border: 4px solid #FFFFFF;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+
+    @include desktop {
+      width: 1120px;
+      height: 600px;
+      border: 16px solid #FFFFFF;
+      border-radius: 48px;
+    }
+
+    & > div {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .preview {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+
+      @include desktop {
+        border-radius: 32px;
+      }
+    }
+
+    .btn {
+      @include button;
+      @include absoluteCenter;
+      z-index: 3;
+      width: 78px;
+      height: 78px;
+
+      @include desktop {
+        width: 293px;
+        height: 293px;
+      }
+
+      svg {
+        width: 78px;
+        height: 78px;
+
+        @include desktop {
+          width: 293px;
+          height: 293px;
+        }
+      }
+    }
+  }
+
+  .text {
+    @include b5-text-mobile;
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+
+    @include desktop {
+      @include b5-text-desktop;
+      margin-top: 55px;
+      width: 735px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+}
